@@ -1,16 +1,7 @@
-terraform {
-  required_providers {
-    aws = {
-      source  = "hashicorp/aws"
-      version = "~> 4.16"
-    }
-  }
 
-  required_version = ">= 1.2.0"
-}
 
 provider "aws" {
-  region  = "us-west-2"
+  region  = "eu-north-1"
 }
 
 resource "aws_instance" "app_server" {
@@ -18,7 +9,7 @@ resource "aws_instance" "app_server" {
   instance_type = "t2.micro"
 
   tags = {
-    Name = "ExampleAppServerInstance"
+    Name = "zee_ExampleAppServerInstance"
   }
 }
 
